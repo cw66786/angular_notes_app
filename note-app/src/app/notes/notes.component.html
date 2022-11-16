@@ -1,3 +1,15 @@
 <div class="wrapper">
+    <div class="header">
+        <h1>Notes</h1>
+        <button mat-raised-button (click)="clearForm()">New Note</button>
+    </div>
+    <div class="notes">
+      
+            <div (click)="getNote(note.title)" class="note" *ngFor="let note of notes">
+                <h3 >{{note.title}}</h3>
+                <button mat-flat-button (click)="deleteNote(note.title)">X</button>
+            </div>
+       
+    </div>
 
 </div>

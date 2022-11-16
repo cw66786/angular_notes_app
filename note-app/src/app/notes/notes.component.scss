@@ -7,3 +7,28 @@
     justify-content: center;
     flex-direction: column;
 }
+
+.header{
+    width: 95%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    border-bottom: 4px solid black;
+}
+
+.notes{
+    width: 95%;
+    height: 90%;
+    overflow: hidden;
+}
+
+.note{
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+}
