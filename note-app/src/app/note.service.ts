@@ -31,13 +31,13 @@ export class NoteService {
 
   saveNotes(savedTitle: string,savedInfo: string){
     let current = this.notes.find((el: Note) =>{
-      return this.notes.indexOf(el.title === savedTitle);
-    })
+      return el.title === savedTitle;
+    });
    
     const newNote ={
       title: savedTitle,
       info: savedInfo
-    }
+    };
 
     if(current !== undefined){
       let index = this.notes.indexOf(current);
@@ -47,11 +47,11 @@ export class NoteService {
     }else{
 
       this.notes.push(newNote);
-    }
+    };
 
     this.notesBehave$.next(this.notes);
     this.refreshStorage();
-  }
+  };
 
   deleteNote(selectedTitle: string){
     
