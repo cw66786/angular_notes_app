@@ -32,3 +32,10 @@
     text-align: center;
     cursor: pointer;
 }
+
+@media (max-width: 700px) {
+    .wrapper{
+        width: 100vw;
+        
+    }
+}

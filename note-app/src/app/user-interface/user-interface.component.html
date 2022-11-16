@@ -1,8 +1,8 @@
 <div class="wrapper">
   <form  [formGroup]="noteForm">
 
-    <input type="text" formControlName="title"/>
-    <textarea rows="30" formControlName="info"></textarea>
+    <input type="text" formControlName="title" placeholder="Title"/>
+    <textarea rows="20" formControlName="info" placeholder="Info"></textarea>
     <button mat-raised-button [disabled]="!noteForm.valid" (click)="revertNote()">Revert</button>
     <button mat-raised-button [disabled]="!noteForm.valid" (click)="saveNote(this.noteForm.get('title')?.value,this.noteForm.get('info')?.value)">Save</button>
   </form>
